@@ -18,4 +18,4 @@ async def message_builder(ctx, text):
         "  ", " "
     )
     text = "\n> ".join(text.split("\n"))
-    await ctx.send(f"> **{constant.title}**\n> \n> ```ansi\n> {text}```")
+    await ctx.send(f"> **{constant.title}**\n> \n> ```ansi\n> {text}```\n> {constant.footer}")
