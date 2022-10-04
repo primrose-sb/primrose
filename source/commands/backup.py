@@ -10,7 +10,7 @@ class BackupCog(commands.Cog, name="backup commands"):
     @commands.command(
         name="fbackup",
         usage="",
-        description="Backup friends"
+        description="backup friends"
     )
     async def fbackup(self, ctx: commands.context):
         os.mkdir("backup")

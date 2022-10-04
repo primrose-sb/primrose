@@ -8,7 +8,7 @@ class MiscellaneousCog(commands.Cog, name="clap command"):
     @commands.command(
         name="clap",
         usage="<text>",
-        description="Replaces spaces with clap emoji"
+        description="replaces spaces with clap emoji"
     )
     async def fmessage(self, ctx: commands.context, *, text: str):
         await ctx.send('👏'.join(text.split()))

@@ -10,7 +10,7 @@ class UtilityCog(commands.Cog, name="first message commands"):
     @commands.command(
         name="fmessage",
         usage="",
-        description="Link to first message"
+        description="link to first message"
     )
     async def fmessage(self, ctx: commands.context, channel: discord.TextChannel = None):
         channel = channel or ctx.channel

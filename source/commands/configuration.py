@@ -9,7 +9,7 @@ class ConfigurationCog(commands.Cog, name="prefix"):
     @commands.command(
         name="prefix",
         usage="<prefix>",
-        description="Change the prefix"
+        description="change the prefix"
     )
     async def prefix(self, ctx: commands.context, prefix: str):
         if len(prefix) > 1:

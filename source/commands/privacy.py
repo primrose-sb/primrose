@@ -13,7 +13,7 @@ class PrivacyCog(commands.Cog, name="privacy commands"):
     @commands.command(
         name="privacy",
         usage="",
-        description="Hide username in console"
+        description="hide username in console"
     )
     async def privacy(self, ctx: commands.context):
         global privacy_toggle

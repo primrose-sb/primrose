@@ -13,19 +13,35 @@ class HelpCog(commands.Cog, name="help commands"):
     )
     async def help(self, ctx: commands.context, command: str = None):
         if command is None:
-            main_text = f"{len(self.bot.commands)} Total Commands\n<> = Needed | [] = Optional\n"
-            for category in self.bot.cogs:
-                if category.startswith("on"):
-                    continue
-                commands_list = [
-                    (command.name, command.usage, command.description)
-                    for command in self.bot.get_cog(category).get_commands()
-                ]
-                main_text += f"\n{category}:\n"
-                main_text += "".join(
-                    [f"{get_prefix()}{command[0]} {command[1]} - {command[2]}\n" for command in commands_list]
-                )
+            main_text = f"{len(self.bot.commands)} Total Commands\n<> = Needed | [] = Optional\n\n"
+            commands_list = [
+                (command.name, command.usage, command.description)
+                for command in self.bot.get_cog("help commands").get_commands()
+            ]
+            main_text += "".join(
+                [f"{get_prefix()}{command[0]} {command[1]} - {command[2].title()}\n" for command in commands_list]
+            )
             await message_builder(ctx, main_text)
         else:
             command = self.bot.get_command(command)
             await message_builder(ctx, f"Name: {command.name}\nUsage: {command.usage}\nDescription: {command.description}")
+
+    @commands.command(
+        name="helpall",
+        usage="",
+        description="list all commands"
+    )
+    async def helpall(self, ctx: commands.context):
+        main_text = f"{len(self.bot.commands)} Total Commands\n<> = Needed | [] = Optional\n"
+        for category in self.bot.cogs:
+            if category.startswith("on"):
+                continue
+            commands_list = [
+                (command.name, command.usage, command.description)
+                for command in self.bot.get_cog(category).get_commands()
+            ]
+            main_text += f"\n{category}:\n"
+            main_text += "".join(
+                [f"{get_prefix()}{command[0]} {command[1]} - {command[2].title()}\n" for command in commands_list]
+            )
+        await message_builder(ctx, main_text)

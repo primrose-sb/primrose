@@ -14,7 +14,7 @@ class ProfileCog(commands.Cog, name="profile commands"):
     @commands.command(
         name="status",
         usage="<text>",
-        description="Change custom status"
+        description="change custom status"
     )
     async def status(self, ctx: commands.context, *, text: str):
         requests.patch(
@@ -28,7 +28,7 @@ class ProfileCog(commands.Cog, name="profile commands"):
     @commands.command(
         name="cstatus",
         usage="",
-        description="Clear custom status"
+        description="clear custom status"
     )
     async def cstatus(self, ctx: commands.context):
         requests.patch(
@@ -42,7 +42,7 @@ class ProfileCog(commands.Cog, name="profile commands"):
     @commands.command(
         name="about",
         usage="<text>",
-        description="Change about me"
+        description="change about me"
     )
     async def about(self, ctx: commands.context, *, text: str):
         requests.patch(
@@ -56,7 +56,7 @@ class ProfileCog(commands.Cog, name="profile commands"):
     @commands.command(
         name="cabout",
         usage="",
-        description="Clear about me"
+        description="clear about me"
     )
     async def cabout(self, ctx: commands.context):
         requests.patch(

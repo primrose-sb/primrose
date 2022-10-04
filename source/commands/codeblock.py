@@ -8,7 +8,7 @@ class CodeblockCog(commands.Cog, name="codeblock commands"):
     @commands.command(
         name="codeblock",
         usage="<language> <text>",
-        description="Send a codeblock"
+        description="send a codeblock"
     )
     async def codeblock(self, ctx: commands.context, language: str, *, text: str):
         await ctx.send(f"```{language}\n{text}\n```")
