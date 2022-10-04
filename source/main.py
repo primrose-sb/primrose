@@ -61,12 +61,12 @@ bot = commands.Bot(
 
 bot.add_cog(HelpCog(bot))
 bot.add_cog(PrivacyCog(bot))
-bot.add_cog(PrefixCog(bot))
+bot.add_cog(ConfigurationCog(bot))
 bot.add_cog(ProfileCog(bot))
 bot.add_cog(CodeblockCog(bot))
 bot.add_cog(BackupCog(bot))
-bot.add_cog(FirstMessageCog(bot))
-bot.add_cog(ClapCog(bot))
+bot.add_cog(UtilityCog(bot))
+bot.add_cog(MiscellaneousCog(bot))
 
 bot.add_cog(OnReadyCog(bot))
 bot.add_cog(OnCommandCog(bot))

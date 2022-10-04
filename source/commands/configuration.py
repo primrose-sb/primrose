@@ -2,7 +2,7 @@ from discord.ext import commands
 from utility import log, get_prefix, print_logo, clear
 
 
-class PrefixCog(commands.Cog, name="prefix"):
+class ConfigurationCog(commands.Cog, name="prefix"):
     def __init__(self, bot: commands.bot):
         self.bot = bot
 

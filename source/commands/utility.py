@@ -3,7 +3,7 @@ import discord
 from utility import message_builder
 
 
-class FirstMessageCog(commands.Cog, name="first message commands"):
+class UtilityCog(commands.Cog, name="first message commands"):
     def __init__(self, bot: commands.bot):
         self.bot = bot
 

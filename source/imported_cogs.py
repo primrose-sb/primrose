@@ -1,12 +1,12 @@
 # Commands
-from commands.help.help import *
-from commands.configuration.prefix import *
-from commands.miscellaneous.privacy import *
-from commands.configuration.profile import *
-from commands.text.codeblock import *
-from commands.backup.friends_backup import *
-from commands.text.first_message import *
-from commands.text.clap import *
+from commands.help import *
+from commands.configuration import *
+from commands.privacy import *
+from commands.profile import *
+from commands.codeblock import *
+from commands.backup import *
+from commands.utility import *
+from commands.miscellaneous import *
 
 # Events
 from events.on_ready import *
