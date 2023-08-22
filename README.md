@@ -1,7 +1,7 @@
 <h1 align="center">Primrose</h1>
 
 <p align="center">
-  <img width="100" height="100" src="https://avatars.githubusercontent.com/u/113864858?s=200&v=4">
+  <img width="100" height="100" src="https://avatars.githubusercontent.com/u/142913010?s=200&v=4">
 </p>
 
 <h4 align="center">An upcoming, modern, open source Discord selfbot written in Python.</h4>
